@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MyChat — personal AI chat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+  <header class="app-head">
+    <h1>My<span class="accent-text">Chat</span></h1>
+    <button class="clear-btn" id="clear-btn">Clear conversation</button>
+  </header>
+
+  <div class="chat-window" id="chat-window">
+    <div class="msg assistant">
+      <div class="bubble">Hey! Ask me anything — this conversation is just between you and your own API key.</div>
+    </div>
+  </div>
+
+  <div class="composer">
+    <textarea id="input-box" placeholder="Type a message…" rows="1"></textarea>
+    <button id="send-btn">Send</button>
+  </div>
+</div>
+
+<div class="gate-overlay hidden" id="gate-overlay">
+  <div class="gate-box">
+    <h2>Enter access key</h2>
+    <p>This chat is protected so only you can use your API quota.</p>
+    <input type="password" id="gate-input" placeholder="Access key" />
+    <button id="gate-submit">Continue</button>
+    <span class="gate-error" id="gate-error"></span>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
